@@ -1,8 +1,6 @@
 package problem;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ThreeSum {
     public static void main(String[] args) {
@@ -25,19 +23,18 @@ public class ThreeSum {
         List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
-            int target = nums[i];
             if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int k = nums.length - 1;
             int j = i + 1;
             while (j < k) {
-                int sum = nums[j] + nums[k] + target;
+                int sum = nums[j] + nums[k] + nums[i];
                 if (sum < 0) {
                     j++;
                 } else if (sum > 0) {
                     k--;
                 } else {
-                    ans.add(new ArrayList<>(List.of(nums[j], nums[k], target)));
+                    ans.add(new ArrayList<>(List.of(nums[j], nums[k], nums[i])));
                     j++;
                     k--;
                     while (j < k && nums[j] == nums[j - 1]) j++;
@@ -47,5 +44,21 @@ public class ThreeSum {
 
         }
         return ans;
+    }
+
+    public static List<List<Integer>> threeSum2(int[] nums) {
+        Arrays.sort(nums);
+        int l, r, sum;
+        Set<List<Integer>> tempRes = new HashSet<>();
+        for(int i = 0; i < nums.length - 2; ++i) {
+            l = i + 1;
+            r = nums.length - 1;
+            while(l < r) {
+                sum = nums[i] + nums[l] + nums[r];
+                if (sum == 0) tempRes.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                if (sum < 0) ++l; else --r;
+            }
+        }
+        return new ArrayList<>(tempRes);
     }
 }
