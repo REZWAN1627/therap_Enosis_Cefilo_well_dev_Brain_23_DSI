@@ -54,6 +54,7 @@ public class ContainerWithMostWater {
                 right--;
             } else {
                 left++;
+
             }
         }
 
