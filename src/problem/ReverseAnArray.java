@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class ReverseAnArray {
     public static void main(String[] args) {
-       // char[] s = {'h', 'e', 'l', 'l', 'o'};
-        char[] s = {'H', 'a', 'n', 'n', 'a','h'};
+        // char[] s = {'h', 'e', 'l', 'l', 'o'};
+        char[] s = {'H', 'a', 'n', 'n', 'a', 'h'};
         reverseString(s);
         System.out.println(Arrays.toString(s));
 

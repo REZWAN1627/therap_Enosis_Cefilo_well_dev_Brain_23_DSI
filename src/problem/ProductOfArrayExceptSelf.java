@@ -12,8 +12,8 @@ public class ProductOfArrayExceptSelf {
         You must write an algorithm that runs in O(n) time and without using the division operation.
          */
 
-          int[] arr = {1, 2, 3, 4};
-       // int[] arr = {4, 3, 2, 1, 2};
+        int[] arr = {1, 2, 3, 4};
+        // int[] arr = {4, 3, 2, 1, 2};
         int[] ans = productExceptSelf(arr);
         System.out.println(Arrays.toString(ans));
     }

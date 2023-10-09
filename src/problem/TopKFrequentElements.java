@@ -9,7 +9,7 @@ public class TopKFrequentElements {
         // int[] arr = {1, 1, 1, 2, 2, 3};
         // int[] arr = {1};
         // int[] arr = {-1, -1};
-       // int[] arr = {1, 2};
+        // int[] arr = {1, 2};
         int[] arr = {3, 0, 1, 0};
         int k = 1;
         //int k = 2;

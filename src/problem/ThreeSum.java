@@ -50,13 +50,14 @@ public class ThreeSum {
         Arrays.sort(nums);
         int l, r, sum;
         Set<List<Integer>> tempRes = new HashSet<>();
-        for(int i = 0; i < nums.length - 2; ++i) {
+        for (int i = 0; i < nums.length - 2; ++i) {
             l = i + 1;
             r = nums.length - 1;
-            while(l < r) {
+            while (l < r) {
                 sum = nums[i] + nums[l] + nums[r];
                 if (sum == 0) tempRes.add(Arrays.asList(nums[i], nums[l], nums[r]));
-                if (sum < 0) ++l; else --r;
+                if (sum < 0) ++l;
+                else --r;
             }
         }
         return new ArrayList<>(tempRes);

@@ -19,8 +19,7 @@ public class ReverseNumber {
                 + countDigit(N));
     }
 
-    static int countDigit(long n)
-    {
-        return (int)Math.floor(Math.log10(n) + 1);
+    static int countDigit(long n) {
+        return (int) Math.floor(Math.log10(n) + 1);
     }
 }

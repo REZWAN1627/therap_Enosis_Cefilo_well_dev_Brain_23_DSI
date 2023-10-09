@@ -9,7 +9,7 @@ public class ValidPalindrome {
     }
 
     //amanaplanac analpanama
-    public static boolean isPalindrome(String s){
+    public static boolean isPalindrome(String s) {
         if (s.isEmpty()) {
             return true;
         }
